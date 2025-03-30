@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change your winter | Сборы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Логотип" class="logo">
+    </div>
+    <div class="header-title-container">
+        <h1 class="header-title">Change your winter</h1>
+    </div>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Одежда</a></li>
+            <li class="nav-item"><a href="#main" class="nav-link">Сборы</a></li>
+            <li class="nav-item"><a href="#reviews" class="nav-link">Отзывы</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main" class="main-content page-2">
+  <section class="schedule-section fade-in">
+    <h2 class="section-title">Расписание лыжных сборов</h2>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Место</th>
+                <th>Время</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr onclick="openModal('modal1')">
+                <td>10-15 января</td>
+                <td>Курорт "Снежный"</td>
+                <td>09:00 - 17:00</td>
+                <td>Обучение для начинающих и опытных лыжников.</td>
+            </tr>
+            <tr onclick="openModal('modal2')">
+                <td>20-25 января</td>
+                <td>Курорт "Горный"</td>
+                <td>10:00 - 18:00</td>
+                <td>Сборы для опытных лыжников с тренерами.</td>
+            </tr>
+            <tr onclick="openModal('modal3')">
+                <td>1-5 февраля</td>
+                <td>Курорт "Ледяной"</td>
+                <td>09:00 - 16:00</td>
+                <td>Семинар по технике катания на лыжах.</td>
+            </tr>
+            <tr onclick="openModal('modal4')">
+                <td>15-20 февраля</td>
+                <td>Курорт "Вершина"</td>
+                <td>09:00 - 17:00</td>
+                <td>Сборы для всей семьи, занятия для детей.</td>
+            </tr>
+        </tbody>
+    </table>
+  </section>
+
+  <div class="form-section fade-in">
+      <form id="registrationForm" onsubmit="submitForm(event)">
+        <h3>Записаться на сборы</h3>
+          <div class="form-group">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Номер телефона:</label>
+              <input type="tel" id="phone" required>
+          </div>
+          <button type="submit" class="submit-button">Отправить</button>
+      </form>
+      <p id="thankYouMessage" class="thank-you-message">Спасибо за заявку!</p>
+  </div>
+</main>
+
+<section id="reviews" class="reviews-section">
+  <h2 class="section-title">Отзывы участников</h2>
+  <div class="review">
+      <p class="review-text">"Сборы на курорте 'Снежный' были просто великолепны! Я научился кататься на лыжах и завел много новых друзей!"</p>
+      <p class="review-author">— Анна П.</p>
+      <img src="images/photo3.jpg" alt="Анна П." class="review-image">
+  </div>
+  <div class="review">
+      <p class="review-text">"Отличная организация и профессиональные тренеры. Рекомендую всем, кто хочет улучшить свои навыки!"</p>
+      <p class="review-author">— Сергей К.</p>
+      <img src="images/photo.jpg" alt="Сергей К." class="review-image">
+  </div>
+  <div class="review">
+      <p class="review-text">"Семинар на курорте 'Ледяной' был очень полезным. Я узнал много нового о технике катания!"</p>
+      <p class="review-author">— Ирина Л.</p>
+      <img src="images/photo2.jpg" alt="Ирина Л." class="review-image">
+  </div>
+</section>
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <div class="modal-body">
+          <div class="modal-text">
+              <h2>Сборы на курорте "Снежный"</h2>
+              <p><strong>Дата:</strong> 10-15 января</p>
+              <p><strong>Время:</strong> 09:00 - 17:00</p>
+              <p><strong>Описание:</strong> Обучение для начинающих и опытных лыжников. В программе: занятия по технике катания, тренировки на склонах, вечерние обсуждения и анализ видео.</p>
+          </div>
+          <img src="images/base1.jpg" alt="Сборы на курорте 'Снежный'" class="modal-image">
+      </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <div class="modal-body">
+          <div class="modal-text">
+              <h2>Сборы на курорте "Горный"</h2>
+              <p><strong>Дата:</strong> 20-25 января</p>
+              <p><strong>Время:</strong> 10:00 - 18:00</p>
+              <p><strong>Описание:</strong> Сборы для опытных лыжников с тренерами. Углубленное изучение техники катания, индивидуальные тренировки и соревнования.</p>
+          </div>
+          <img src="images/base2.jpg" alt="Сборы на курорте 'Горный'" class="modal-image">
+      </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <div class="modal-body">
+          <div class="modal-text">
+              <h2>Семинар на курорте "Ледяной"</h2>
+              <p><strong>Дата:</strong> 1-5 февраля</p>
+              <p><strong>Время:</strong> 09:00 - 16:00</p>
+              <p><strong>Описание:</strong> Семинар по технике катания на лыжах. Участники получат теоретические знания и практические навыки от профессиональных инструкторов.</p>
+          </div>
+          <img src="images/base3.jpg" alt="Семинар на курорте 'Ледяной'" class="modal-image">
+      </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <div class="modal-body">
+          <div class="modal-text">
+              <h2>Сборы для всей семьи на курорте "Вершина"</h2>
+              <p><strong>Дата:</strong> 15-20 февраля</p>
+              <p><strong>Время:</strong> 09:00 - 17:00</p>
+              <p><strong>Описание:</strong> Сборы для всей семьи, занятия для детей. Программа включает обучение катанию на лыжах для детей и взрослых, а также развлекательные мероприятия.</p>
+          </div>
+          <img src="images/base4.jpg" alt="Сборы для всей семьи на курорте 'Вершина'" class="modal-image">
+      </div>
+  </div>
+</div>
+
+  <section class="info-section">
+    <div id="about" class="about-section">
+        <h2 class="section-title">О нас</h2>
+        <p class="about-text">Мы - команда, которая любит зимние виды спорта и предлагает только качественную одежду.</p>
+    </div>
+    <div id="contact" class="contact-section">
+        <h2 class="section-title">Контакты</h2>
+        <p class="contact-email">Email: info@skiwearstore.com</p>
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <p class="footer-text">&copy; 2025 Change your winter. Все права защищены.</p>
+    </footer>
+
+<script>
+    function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    document.body.style.overflow = "";
+    }
+
+    window.onclick = function(event) {
+    const modals = document.getElementsByClassName('modal');
+    for (let i = 0; i < modals.length; i++) {
+        if (event.target === modals[i]) {
+            closeModal(modals[i].id);
+            document.body.style.overflow = "";
+        }
+    }
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('registrationForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    }
+</script>
+</body>
+</html>
